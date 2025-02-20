@@ -288,14 +288,12 @@ if(LIVE555_MONOLITH_BUILD)
         $<TARGET_OBJECTS:groupsock>
         $<TARGET_OBJECTS:BasicUsageEnvironment>
         $<TARGET_OBJECTS:liveMedia>
-        $<TARGET_OBJECTS:EpollTaskScheduler>
     )
     target_include_directories(live555 INTERFACE
         $<BUILD_INTERFACE:${live555_SOURCE_DIR}/UsageEnvironment/include>
         $<BUILD_INTERFACE:${live555_SOURCE_DIR}/groupsock/include>
         $<BUILD_INTERFACE:${live555_SOURCE_DIR}/BasicUsageEnvironment/include>
         $<BUILD_INTERFACE:${live555_SOURCE_DIR}/liveMedia/include>
-        $<BUILD_INTERFACE:${live555_SOURCE_DIR}/EpollTaskScheduler/include>
     )
     if(MSVC)
         target_link_libraries(live555 PUBLIC ws2_32)
